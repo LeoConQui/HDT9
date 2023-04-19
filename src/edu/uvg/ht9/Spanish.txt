@@ -1,0 +1,4 @@
+Dog,Perro
+Woman,mujer
+Homework,tarea
+Town,pueblo

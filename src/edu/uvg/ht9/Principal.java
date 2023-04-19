@@ -11,28 +11,35 @@ import java.util.ArrayList;
  */
 public class Principal {
 
-    // creamos un objeto de tipo factory
-    Factory fabrica = new Factory();
+    public static void main(String[] args) {
+        // creamos un objeto de tipo factory
+        //Factory fabrica = new Factory();
 
-    // creamos una referencia de la interfaz que implementan todos los arboles
-    // esto con la finalidad de ser un "contenedor" de las instancias que de el factory
-    IEstructuraArbol<Palabra> arbol;
+        // creamos una referencia de la interfaz que implementan todos los arboles
+        // e    sto con la finalidad de ser un "contenedor" de las instancias que de el factory
+        //IEstructuraArbol<Palabra> arbol;
 
-    // creamos un objeto ArrayList de Strings para guardar las palabras leidas del archivo
-    ArrayList<String> lecturaSpanish = new ArrayList<String>();
+        // creamos un objeto ArrayList de Strings para guardar las palabras leidas del archivo
+        ArrayList<String> lecturaSpanish = new ArrayList<String>();
 
-    // leemos el documento Spanish.txt
-    try {
-        BufferedReader reader = new BufferedReader(new FileReader("Spanish.txt"));
-        String line;
-        while ((line = reader.readLine())!= null) {
-            lecturaSpanish.add(line);
+        // leemos el documento Spanish.txt
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("Spanish.txt"));
+            String line;
+            while ((line = reader.readLine())!= null) {
+                lecturaSpanish.add(line);
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        reader.close();
-    } catch (Exception e) {
-        e.printStackTrace();
+
+        for (String string : lecturaSpanish) {
+            System.out.println(string);
+        }
     }
     
     
     
 }
+

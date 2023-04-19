@@ -1,7 +1,5 @@
 package edu.uvg.ht9;
 
-import structure5.Association;
-
 /**
  * Factory es la clase que implementa el diseno creacional factory
  * @author Leonel Contreras 18797
